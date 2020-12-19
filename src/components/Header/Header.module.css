@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+.container {
+  color: black;
+}
+
+.title {
+  font-family: "Anton", sans-serif !important;
+}
+
+.coronavirusLogo {
+  font-size: inherit !important;
+  padding: 10px;
+  color: red;
+}
+
+@media screen and (max-width: 700px) {
+  .title {
+    font-size: 400%;
+  }
+  .coronavirusLogo {
+    padding: 7px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 300%;
+  }
+  .coronavirusLogo {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .title {
+    font-size: 200%;
+  }
+  .coronavirusLogo {
+    padding: 3px;
+  }
+}
