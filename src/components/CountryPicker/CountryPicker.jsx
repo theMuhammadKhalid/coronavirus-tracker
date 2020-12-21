@@ -6,32 +6,28 @@ import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 
-export default function CountryPicker() {
-  const [age, setAge] = React.useState("");
+export default function CountryPicker({allCountriesData, handleCountryChange}) {
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
 
-  return (
+  return allCountriesData.length ? (
     <div className={styles.container}>
-      <FormControl variant="outlined" fullWidth="true">
+      <FormControl variant="outlined" className={styles.formControl}>
         <InputLabel id="country-picker-label">Select</InputLabel>
         <Select
           labelId="country-picker-label"
           id="select"
-          value={age}
-          onChange={handleChange}
+          defaultValue="Global"
+          onChange={(event) => handleCountryChange(event.target.value)}
           label="Select"
         >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value="Global">Global</MenuItem>
+          {allCountriesData.map((value, index) => (
+            <MenuItem value={value.country} key={index}>{value.country}</MenuItem>
+          ))}
         </Select>
       </FormControl>
     </div>
+  ) : (
+    "Loading..."
   );
 }

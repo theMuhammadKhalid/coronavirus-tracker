@@ -1,3 +1,87 @@
-.container{
-    background-color: aqua;
+.container {
+  padding: 5px;
+  width: 90%;
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1000px;
+  }
+}
+
+.globalTitile {
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .globalTitile {
+    font-size: 1.3em !important;
+    text-align: center !important;
+  }
+}
+
+.titleHeader {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.images {
+  width: 75px;
+}
+
+.numbers {
+  font-weight: bold !important;
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .images {
+    width: 60px;
+  }
+
+  .title {
+    font-size: 1.2em !important;
+  }
+
+  .numbers {
+    font-size: 1.7em !important;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px),
+  (max-width: 350px) {
+  .images {
+    width: 40px;
+  }
+
+  .title {
+    font-size: 1em !important;
+  }
+
+  .numbers {
+    font-size: 1.5em !important;
+  }
+}
+
+.confirmedCard {
+  background-color: #d5f4f6 !important;
+}
+
+.deathsCard {
+  background-color: #fbf2e9 !important;
+}
+
+.recoveredCard {
+  background-color: #e0f3df !important;
+}
+
+.lastUpdate {
+  padding: 10px 0px;
+}
+
+@media screen and (max-width: 300px) {
+  .lastUpdate {
+    font-size: 0.8em !important;
+  }
 }

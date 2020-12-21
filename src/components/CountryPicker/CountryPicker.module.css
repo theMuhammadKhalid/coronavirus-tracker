@@ -1,5 +1,5 @@
 .container {
-  padding: 3% 0%;
+  padding: 2% 0%;
   width: 90%;
 }
 
@@ -7,4 +7,8 @@
   .container {
     width: 1000px;
   }
+}
+
+.formControl {
+  width: 100%;
 }
