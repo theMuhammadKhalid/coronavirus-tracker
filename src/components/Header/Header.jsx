@@ -6,11 +6,11 @@ import CoronavirusLogo from "./CoronavirusLogo.jsx";
 
 export default function Header() {
   return (
-    <div className={styles.container}>
+    <header className={styles.container}>
       <Typography variant="h1" align="center" className={styles.title}>
         C<CoronavirusLogo className={styles.coronavirusLogo} />
         VID-19 TRACKER
       </Typography>
-    </div>
+    </header>
   );
 }

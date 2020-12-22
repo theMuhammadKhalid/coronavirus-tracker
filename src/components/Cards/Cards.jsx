@@ -3,11 +3,13 @@ import styles from "./Cards.module.css";
 
 import CountUp from "react-countup";
 
-import Grid from "@material-ui/core/Grid";
-
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
+import {
+  Grid,
+  Card,
+  CardContent,
+  Typography,
+  CircularProgress,
+} from "@material-ui/core/";
 
 import confirmedImage from "../../images/confirmed-cases.png";
 import deathsImage from "../../images/deaths.png";
@@ -19,7 +21,7 @@ export default function Cards({
   country,
 }) {
   if (confirmed === undefined && allCountriesData.length === 0) {
-    return "Loading...";
+    return <CircularProgress />;
   }
 
   return (

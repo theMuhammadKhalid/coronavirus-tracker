@@ -1,3 +1,23 @@
-.container{
-    width: 70%;
+.container {
+  width: 1000px !important;
+  height: 400px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    width: 75% !important;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 85% !important;
+    height: 250px;
+  }
+}
+
+.btnGroup {
+  margin: 10px 0px;
 }

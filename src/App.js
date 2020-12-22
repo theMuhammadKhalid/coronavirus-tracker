@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./App.module.css";
 
-import { Header, CountryPicker, Cards, Charts } from "./components";
+import { Header, CountryPicker, Cards, Charts, Footer } from "./components";
 
 import {
   fetchTotalData,
@@ -34,8 +34,17 @@ function App() {
           setCountry(getCountry);
         }}
       />
-      <Cards totalData={totalData} allCountriesData={allCountriesData} country={country}/>
-      <Charts totalTimelineData={totalTimelineData} />
+      <Cards
+        totalData={totalData}
+        allCountriesData={allCountriesData}
+        country={country}
+      />
+      <Charts
+        totalTimelineData={totalTimelineData}
+        allCountriesData={allCountriesData}
+        country={country}
+      />
+      <Footer />
     </div>
   );
 }

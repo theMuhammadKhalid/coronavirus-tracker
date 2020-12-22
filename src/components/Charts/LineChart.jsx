@@ -24,6 +24,14 @@ export default function LineChart({ lineChartData }) {
           },
         ],
       }}
+      options={{
+        title: {
+          display: true,
+          text: "Line Chart",
+          fontSize: 20,
+        },
+        maintainAspectRatio: false,
+      }}
     />
   );
 }
